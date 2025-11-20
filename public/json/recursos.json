@@ -1,0 +1,178 @@
+{
+    "recursos": [
+        {
+            "id": 1,
+            "tipo": "Instalacion",
+            "instalacion": [
+                {
+                    "id": 1,
+                    "nombre": "Salón de Eventos Comunitario",
+                    "capacidad": 120,
+                    "ubicacion": "Casa Comunal - Planta Baja",
+                    "descripcion": "Salón amplio para reuniones, fiestas y eventos comunitarios.",
+                    "imagen": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+                },
+                {
+                    "id": 2,
+                    "nombre": "Cancha de Fútbol Principal",
+                    "capacidad": 30,
+                    "ubicacion": "Área Deportiva - Sector A",
+                    "descripcion": "Cancha principal para actividades deportivas de la comunidad.",
+                    "imagen": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf"
+                },
+                {
+                    "id": 3,
+                    "nombre": "Área de Juegos Infantiles",
+                    "capacidad": 20,
+                    "ubicacion": "Parque Central",
+                    "descripcion": "Zona recreativa para niños equipada con columpios y resbaladeras.",
+                    "imagen": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1"
+                },
+                {
+                    "id": 4,
+                    "nombre": "Piscina Comunitaria",
+                    "capacidad": 50,
+                    "ubicacion": "Club Social",
+                    "descripcion": "Piscina grande para uso recreativo y actividades deportivas.",
+                    "imagen": "https://images.unsplash.com/photo-1505842465776-3d90f616310d"
+                },
+                {
+                    "id": 5,
+                    "nombre": "Gimnasio Comunal",
+                    "capacidad": 25,
+                    "ubicacion": "Casa Comunal - Piso 2",
+                    "descripcion": "Espacio equipado con máquinas para entrenamiento físico.",
+                    "imagen": "https://images.unsplash.com/photo-1558611848-73f7eb4001a1"
+                },
+                {
+                    "id": 6,
+                    "nombre": "Salón de Reuniones Pequeño",
+                    "capacidad": 15,
+                    "ubicacion": "Casa Comunal - Planta Alta",
+                    "descripcion": "Salón ideal para reuniones pequeñas o talleres comunitarios.",
+                    "imagen": "https://images.unsplash.com/photo-1557804506-669a67965ba0"
+                },
+                {
+                    "id": 7,
+                    "nombre": "Cancha de Básquet",
+                    "capacidad": 20,
+                    "ubicacion": "Área Deportiva - Sector B",
+                    "descripcion": "Cancha para entrenamiento y partidos recreativos de básquet.",
+                    "imagen": "https://images.unsplash.com/photo-1517649763962-0c623066013b"
+                }
+            ]
+        },
+        {
+            "id": 2,
+            "tipo": "Herramienta",
+            "herramienta": [
+                {
+                    "id": 8,
+                    "nombre": "Podadora de Césped",
+                    "descripcion": "Equipo de jardinería para mantenimiento de áreas verdes.",
+                    "cantidad": 2,
+                    "imagen": "https://images.unsplash.com/photo-1598515214388-d735ccab70bb"
+                },
+                {
+                    "id": 9,
+                    "nombre": "Mesas Plegables",
+                    "descripcion": "Mesas para eventos o reuniones comunitarias.",
+                    "cantidad": 10,
+                    "imagen": "https://images.unsplash.com/photo-1582582514630-dcdbdd35634b"
+                },
+                {
+                    "id": 10,
+                    "nombre": "Silla para Eventos",
+                    "descripcion": "Sillas plásticas resistentes para actividades comunitarias.",
+                    "cantidad": 50,
+                    "imagen": "https://images.unsplash.com/photo-1621361365424-06f97e2f73a0"
+                },
+                {
+                    "id": 11,
+                    "nombre": "Carretilla de Transporte",
+                    "descripcion": "Carretilla para mover materiales pesados.",
+                    "cantidad": 4,
+                    "imagen": "https://images.unsplash.com/photo-1585320806297-a0f2d5746a47"
+                },
+                {
+                    "id": 12,
+                    "nombre": "Juego de Herramientas Manuales",
+                    "descripcion": "Set de herramientas para mantenimiento general.",
+                    "cantidad": 5,
+                    "imagen": "https://images.unsplash.com/photo-1592103514739-37bb0ad6aad1"
+                },
+                {
+                    "id": 13,
+                    "nombre": "Escalera Extensible",
+                    "descripcion": "Escalera para reparaciones en altura.",
+                    "cantidad": 2,
+                    "imagen": "https://images.unsplash.com/photo-1581093588401-22e56f2cf0c0"
+                },
+                {
+                    "id": 14,
+                    "nombre": "Equipo de Sonido",
+                    "descripcion": "Parlantes y micrófonos para eventos comunitarios.",
+                    "cantidad": 1,
+                    "imagen": "https://images.unsplash.com/photo-1516280030429-27679b3dc9cf"
+                },
+                {
+                    "id": 15,
+                    "nombre": "Motobomba",
+                    "descripcion": "Equipo para bombeo de agua en emergencias.",
+                    "cantidad": 1,
+                    "imagen": "https://images.unsplash.com/photo-1581091226825-2e6a79c5d2df"
+                },
+                {
+                    "id": 16,
+                    "nombre": "Cortasetos",
+                    "descripcion": "Herramienta para podar arbustos.",
+                    "cantidad": 3,
+                    "imagen": "https://images.unsplash.com/photo-1618598433424-8bb5e75e7314"
+                },
+                {
+                    "id": 17,
+                    "nombre": "Generador Eléctrico",
+                    "descripcion": "Generador portátil para cortes de energía.",
+                    "cantidad": 1,
+                    "imagen": "https://images.unsplash.com/photo-1607860102360-27f60438e1a5"
+                },
+                {
+                    "id": 18,
+                    "nombre": "Taladro Industrial",
+                    "descripcion": "Taladro para uso comunitario.",
+                    "cantidad": 3,
+                    "imagen": "https://images.unsplash.com/photo-1594750206118-b0a3f3c3e5df"
+                },
+                {
+                    "id": 19,
+                    "nombre": "Pintura y Rodillos",
+                    "descripcion": "Kit para mantenimiento de paredes.",
+                    "cantidad": 6,
+                    "imagen": "https://images.unsplash.com/photo-1585855749253-6f3c5b0d3a6b"
+                },
+                {
+                    "id": 20,
+                    "nombre": "Lámparas Portátiles",
+                    "descripcion": "Lámparas recargables para eventos nocturnos.",
+                    "cantidad": 12,
+                    "imagen": "https://images.unsplash.com/photo-1509395062183-67c5ad6faff9"
+                },
+                {
+                    "id": 21,
+                    "nombre": "Equipo de Limpieza",
+                    "descripcion": "Escobas, trapeadores y cubetas.",
+                    "cantidad": 15,
+                    "imagen": "https://images.unsplash.com/photo-1581578731548-c64695cc6955"
+                },
+                {
+                    "id": 22,
+                    "nombre": "Kit de Seguridad",
+                    "descripcion": "Chalecos, conos y señalización.",
+                    "cantidad": 5,
+                    "imagen": "https://images.unsplash.com/photo-1524678606370-a47ad25cb82a"
+                }
+            ]
+        }
+    ]
+}
+

@@ -1,4 +1,6 @@
-<div>
-  <h1>NUEVO PROYRCTO {{ title() }}</h1>
+<div class="container-sm my-4 text-center">
+  <h1>NUEVO PROYRCTO {{ title() | uppercase }}</h1>
 </div>
-<router-outlet></router-outlet>
+<section class="container-sm align-center border text-center">
+  <router-outlet></router-outlet>
+</section>

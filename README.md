@@ -6,6 +6,10 @@
 
 - `npm i`
 
+- `npm install -g @angular/cli`
+
+- `npm start`
+
 2. Cuando trabajen suban sus cambios a ramas distintas de la main, aqui este es el comando para crear ramas nuevas basadas en la main
 
 - `git checkout -b nombre-de-tu-rama `
