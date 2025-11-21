@@ -1,18 +1,18 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Reservaciones } from '../../Models/reservaciones';
 import { Recursos } from '../../Models/recursos';
 import { ServReservacionesService } from '../../services/serv-reservaciones';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-tabla-reutilizable',
   imports: [],
   templateUrl: './tablaReutilizable.html',
- 
 })
 export class TablaReutilizable {
-
   reservaciones: Reservaciones[] = [];
   recursos: Recursos[] = [];
+  router = inject(Router);
 
   constructor(private miServicio: ServReservacionesService) {}
 
@@ -28,6 +28,9 @@ export class TablaReutilizable {
   loadRecursos(): void {
     this.miServicio.getRecursos().subscribe((data: Recursos[]) => (this.recursos = data));
   }
+  visualizarReserva(id: number) {
+    this.router.navigate(['/reserva/', id]);
+  }
 
   // comprar(movie: Movie) {
   //   alert('comprando la pelicula: ' + movie.title);
@@ -38,4 +41,4 @@ export class TablaReutilizable {
   // activar(img: HTMLImageElement) {
   //   img.classList.add('activa');
   // }
- }
+}

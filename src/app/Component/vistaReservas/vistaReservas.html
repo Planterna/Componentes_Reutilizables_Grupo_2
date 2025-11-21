@@ -1,0 +1,23 @@
+<div class="container-sm my-4 d-flex justify-content-center">
+  @if (reservacion) {
+  <div class="card" style="width: 18rem">
+    <img [src]="reservacion.imagen" class="card-img-top" [alt]="reservacion.nombre_recurso" />
+    <div class="card-body">
+      <h5 class="card-title">{{ reservacion.nombre_recurso }}</h5>
+      <p class="card-text"><strong>Motivo de Reservación: </strong>{{ reservacion.motivo }}</p>
+      <p class="card-text"><strong>Hora de Inicio: </strong>{{ reservacion.hora_inicio }}</p>
+      <p class="card-text"><strong>Hora de Finalización: </strong>{{ reservacion.hora_fin }}</p>
+      <p class="card-text"><strong>Estado: </strong>{{ reservacion.estado }}</p>
+    </div>
+    <div class="card-body align-content-center">
+      <a routerLink="tabla-reutilizable" class="card-link">Volver</a>
+    </div>
+  </div>
+  }@else {
+  <div>
+    <span class="text-danger border"> No se cargaron los datos </span>
+    <hr />
+    <a routerLink="tabla-reutilizable" class="card-link">Volver</a>
+  </div>
+  }
+</div>
