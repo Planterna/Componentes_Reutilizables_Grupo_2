@@ -40,10 +40,13 @@
 
 
 
-<div  *ngIf="alert" class="alert alert-danger d-flex align-items-center py-1 my-2 small" role="alert">
-  <svg   class="bi flex-shrink-0 me-2"  role="img"  aria-label="Danger:"width="80" height="80" >
-     <use xlink:href="#exclamation-triangle-fill" /></svg>
-     Este formualrio negativo
-</div>
+@if (alert) {
+  <div class="alert alert-danger d-flex align-items-center py-1 my-2 small" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:" width="80" height="80">
+      <use xlink:href="#exclamation-triangle-fill" />
+    </svg>
+    Este formulario negativo
+  </div>
+}
 
 <button type="button"  class="btn btn-primary btn-sm mt-2" id="liveAlertBtn"  (click)="activaralerta()"> Mostrar alerta </button>
