@@ -16,23 +16,37 @@
     An example alert with an icon
   </div>
 </div>
+
 <div class="alert alert-success d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Success:"><use xlink:href="#check-circle-fill"/></svg>
   <div>
     An example success alert with an icon
   </div>
 </div>
+
 <div class="alert alert-warning d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Warning:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
     An example warning alert with an icon
   </div>
 </div>
+
 <div class="alert alert-danger d-flex align-items-center" role="alert">
   <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:"><use xlink:href="#exclamation-triangle-fill"/></svg>
   <div>
     An example danger alert with an icon
   </div>
-
-  <button type="button" class="btn btn-primary" id="liveAlertBtn">Show live alert</button>
 </div>
+
+
+
+@if (alert) {
+  <div class="alert alert-danger d-flex align-items-center py-1 my-2 small" role="alert">
+    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Danger:" width="80" height="80">
+      <use xlink:href="#exclamation-triangle-fill" />
+    </svg>
+    Este formulario negativo
+  </div>
+}
+
+<button type="button"  class="btn btn-primary btn-sm mt-2" id="liveAlertBtn"  (click)="activaralerta()"> Mostrar alerta </button>
