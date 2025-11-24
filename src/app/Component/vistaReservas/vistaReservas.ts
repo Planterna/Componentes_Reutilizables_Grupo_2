@@ -18,7 +18,6 @@ export class VistaReservas {
     const id = this.route.snapshot.paramMap.get('id');
     this.miServicio.getReservaById(Number(id)).subscribe((dato: Reservaciones) => {
       this.reservacion = dato;
-      console.log(dato);
     });
   }
 }

@@ -18,27 +18,29 @@ export class TablaReutilizable {
 
   ngOnInit(): void {
     this.loadReservas();
-    // this.loadGenres();
   }
 
   loadReservas(): void {
     this.miServicio.getReservas().subscribe((data: Reservaciones[]) => (this.reservaciones = data));
   }
 
-  loadRecursos(): void {
-    this.miServicio.getRecursos().subscribe((data: Recursos[]) => (this.recursos = data));
-  }
   visualizarReserva(id: number) {
     this.router.navigate(['/reserva/', id]);
   }
 
-  // comprar(movie: Movie) {
-  //   alert('comprando la pelicula: ' + movie.title);
-  // }
-  // desactivar(img: HTMLImageElement) {
-  //   img.classList.remove('activa');
-  // }
-  // activar(img: HTMLImageElement) {
-  //   img.classList.add('activa');
-  // }
+  searchByName(name: string) {
+    this.miServicio
+      .searchReservasForName(name)
+      .subscribe((data: Reservaciones[]) => (this.reservaciones = data));
+  }
+
+  charge() {
+    this.loadReservas();
+  }
+
+  deleteReserva(id: number) {
+    this.miServicio.deleteReserva(id).subscribe((reservaActualizada: Reservaciones) => {
+      this.reservaciones = this.reservaciones.map((r) => (r.id === id ? reservaActualizada : r));
+    });
+  }
 }

@@ -1,7 +1,7 @@
 {
   "reservas": [
     {
-      "id": 1,
+      "id": "1",
       "id_tipo_recurso": 1,
       "nombre_vecino": "Carlos López",
       "fecha": "2025-11-22",
@@ -11,10 +11,11 @@
       "estado": "Aprobada",
       "id_recurso": 1,
       "nombre_recurso": "Salón de Eventos Comunitario",
-      "imagen": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d"
+      "imagen": "https://images.unsplash.com/photo-1521737604893-d14cc237f11d",
+      "status": "Desactivado"
     },
     {
-      "id": 2,
+      "id": "2",
       "id_tipo_recurso": 1,
       "nombre_vecino": "María González",
       "fecha": "2025-11-25",
@@ -24,10 +25,11 @@
       "estado": "Pendiente",
       "id_recurso": 3,
       "nombre_recurso": "Área de Juegos Infantiles",
-      "imagen": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1"
+      "imagen": "https://images.unsplash.com/photo-1508921912186-1d1a45ebb3c1",
+      "status": "Desactivado"
     },
     {
-      "id": 3,
+      "id": "3",
       "id_tipo_recurso": 1,
       "nombre_vecino": "José Quijije",
       "fecha": "2025-12-01",
@@ -37,10 +39,11 @@
       "estado": "Rechazada",
       "id_recurso": 2,
       "nombre_recurso": "Cancha de Fútbol Principal",
-      "imagen": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf"
+      "imagen": "https://images.unsplash.com/photo-1508609349937-5ec4ae374ebf",
+      "status": "Activo"
     },
     {
-      "id": 4,
+      "id": "4",
       "id_tipo_recurso": 2,
       "nombre_vecino": "Andrea Zambrano",
       "fecha": "2025-12-03",
@@ -50,10 +53,11 @@
       "estado": "Aprobada",
       "id_recurso": 8,
       "nombre_recurso": "Podadora de Césped",
-      "imagen": "https://www.shutterstock.com/image-photo/top-view-modern-orangegrey-gasoline-600nw-2459051731.jpg"
+      "imagen": "https://www.shutterstock.com/image-photo/top-view-modern-orangegrey-gasoline-600nw-2459051731.jpg",
+      "status": "Activo"
     },
     {
-      "id": 5,
+      "id": "5",
       "id_tipo_recurso": 1,
       "nombre_vecino": "Luis Pérez",
       "fecha": "2025-12-05",
@@ -63,7 +67,8 @@
       "estado": "Pendiente",
       "id_recurso": 5,
       "nombre_recurso": "Gimnasio Comunal",
-      "imagen": "https://images.unsplash.com/photo-1558611848-73f7eb4001a1"
+      "imagen": "https://images.unsplash.com/photo-1558611848-73f7eb4001a1",
+      "status": "Activo"
     }
   ]
 }
