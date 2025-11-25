@@ -10,6 +10,7 @@ export interface Reservaciones {
   id_recurso: number;
   nombre_recurso?: TipoRecurso;
   imagen: string;
+  status?: TipoStatus;
 }
 
 export enum Estado {
@@ -21,4 +22,9 @@ export enum Estado {
 export enum TipoRecurso {
   Herramienta = 'herramienta',
   Instalacion = 'instalacion',
+}
+
+export enum TipoStatus {
+  Activo = 'Activo',
+  Desactivado = 'Desactivado',
 }

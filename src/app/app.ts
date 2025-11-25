@@ -8,5 +8,6 @@ import { UpperCasePipe } from '@angular/common';
   styleUrl: './app.css',
 })
 export class App {
-  title = signal('componentes uwu reutilizables grupo2');
+  title = signal('componentes reutilizables grupo2');
+  
 }

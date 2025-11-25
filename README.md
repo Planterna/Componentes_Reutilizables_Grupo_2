@@ -14,7 +14,7 @@
 
 - `npx json-server --watch public/json/recursos.json --port 3000`
 
-- `npx json-server --watch public/json/reservaciones.json --port 4800`
+- `npx json-server --watch public/json/reservaciones.json --port 5000`
 
 3. Cuando trabajen suban sus cambios a ramas distintas de la main, aqui este es el comando para crear ramas nuevas basadas en la main
 

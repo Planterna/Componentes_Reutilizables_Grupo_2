@@ -1,5 +1,34 @@
 <h3 class="mt-4 text-primary text-center">Tabla de Reservaciones</h3>
+
 @if (reservaciones.length !== 0) {
+
+<div class="input-group mb-3">
+  <input
+    type="text"
+    class="form-control"
+    placeholder="Buscar por Reservista"
+    aria-label="Buscar por Reservista"
+    aria-describedby="button-addon2"
+    #nombre
+  />
+  <button
+    class="btn btn-outline-secondary"
+    (click)="searchByName(nombre.value)"
+    type="button"
+    id="button-addon2"
+  >
+    <i class="bi bi-search"></i> Buscar
+  </button>
+</div>
+
+<div>
+  <app-cuadro-alerta
+    [datos]="reservacion"
+    [informacion]="info"
+    (respuesta)="respuestaModal($event)"
+  ></app-cuadro-alerta>
+</div>
+
 <table class="table table-bordered table-hover w-75 text-center mx-auto my-4 shadow">
   <thead class="table-light">
     <tr>
@@ -12,6 +41,7 @@
       <th scope="col">Motivo</th>
       <th scope="col">Estado</th>
       <th scope="col">Recurso Reservado</th>
+      <th scope="col">Status</th>
       <th scope="col">Acciones</th>
     </tr>
   </thead>
@@ -20,11 +50,13 @@
     @for (reservas of reservaciones; track reservas.id) {
     <tr>
       <td>{{ reservas.id }}</td>
+
       @if (reservas.id_tipo_recurso === 1) {
       <td>Instalaciones</td>
-      }@else {
+      } @else {
       <td>Herramientas</td>
       }
+
       <td>{{ reservas.nombre_vecino }}</td>
       <td>{{ reservas.fecha }}</td>
       <td>{{ reservas.hora_inicio }}</td>
@@ -32,16 +64,46 @@
       <td>{{ reservas.motivo }}</td>
       <td>{{ reservas.estado }}</td>
       <td>{{ reservas.nombre_recurso }}</td>
-      <td>
-        <button class="btn btn-info" (click)="visualizarReserva(reservas.id)">Ver</button>
-        <a class="btn btn-danger">Eliminar</a>
+      <td>{{ reservas.status }}</td>
+
+      <td class="d-flex justify-content-center gap-2">
+        <button
+          class="btn btn-info btn-sm"
+          type="button"
+          (click)="visualizarReserva(reservas.id, 'info')"
+        >
+          <i class="bi bi-eye"></i>
+        </button>
+
+        <button
+          class="btn btn-danger btn-sm"
+          type="button"
+          (click)="deleteReserva(reservas.id, 'danger')"
+        >
+          <i class="bi bi-trash"></i>
+        </button>
+
+        <button
+          class="btn btn-success btn-sm"
+          type="button"
+          (click)="activarReserva(reservas.id, 'success')"
+        >
+          <i class="bi bi-check-circle"></i>
+        </button>
       </td>
     </tr>
     }
   </tbody>
 </table>
-}@else {
-<div>
-  <span class="text-danger border"> No se cargaron los datos </span>
+
+} @else {
+
+<div class="text-center mt-3">
+  <span class="text-danger border p-2 d-inline-block">No se cargaron los datos</span>
+  <hr />
+  <button class="btn btn-primary" (click)="charge()">
+    <i class="bi bi-arrow-clockwise"></i> Recargar
+  </button>
 </div>
+
 }
