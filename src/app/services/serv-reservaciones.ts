@@ -9,7 +9,7 @@ import { Reservaciones } from '../Models/reservaciones';
 })
 export class ServReservacionesService {
   private recursosUrl = 'http://localhost:3000/recursos';
-  private reservasUrl = 'http://localhost:4800/reservas';
+  private reservasUrl = 'http://localhost:5000/reservas';
 
   constructor(private http: HttpClient) {}
 
@@ -34,6 +34,13 @@ export class ServReservacionesService {
   deleteReserva(id: number): Observable<Reservaciones> {
     return this.getReservaById(id).pipe(
       map((reserva) => ({ ...reserva, status: 'Desactivado' })),
+      switchMap((body) => this.http.put<Reservaciones>(`${this.reservasUrl}/${id}`, body))
+    );
+  }
+
+  activarReserva(id: number): Observable<Reservaciones> {
+    return this.getReservaById(id).pipe(
+      map((reserva) => ({ ...reserva, status: 'Activo' })),
       switchMap((body) => this.http.put<Reservaciones>(`${this.reservasUrl}/${id}`, body))
     );
   }

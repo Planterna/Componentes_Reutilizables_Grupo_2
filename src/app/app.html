@@ -1,19 +1,9 @@
 <div class="container-sm my-4 text-center">
-  <h1>NUEVO PROYRCTO {{ title() | uppercase }}</h1>
+  <h1>NUEVO PROYECTO {{ title() | uppercase }}</h1>
 </div>
-
-<div class="container-sm my-4 text-center">
-  <a class="btn btn-primary" routerLink="tabla-reutilizable" routerLinkActive="active"
-    >Tabla Reutilizable</a
-  >
-  <a class="btn btn-secondary" routerLink="cuadro-alerta">Cuadro alerta</a>
-</div>
+ 
 <section class="container-sm align-center border text-center">
-  @if ( notifications() ) {
-  <div>
-    <span>Notificación</span>
-  </div>
-  }
-  <button (click)="change()">Cambiar</button>
   <router-outlet></router-outlet>
 </section>
+
+

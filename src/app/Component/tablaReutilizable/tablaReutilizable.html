@@ -1,5 +1,7 @@
 <h3 class="mt-4 text-primary text-center">Tabla de Reservaciones</h3>
+
 @if (reservaciones.length !== 0) {
+
 <div class="input-group mb-3">
   <input
     type="text"
@@ -15,9 +17,18 @@
     type="button"
     id="button-addon2"
   >
-    Buscar
+    <i class="bi bi-search"></i> Buscar
   </button>
 </div>
+
+<div>
+  <app-cuadro-alerta
+    [datos]="reservacion"
+    [informacion]="info"
+    (respuesta)="respuestaModal($event)"
+  ></app-cuadro-alerta>
+</div>
+
 <table class="table table-bordered table-hover w-75 text-center mx-auto my-4 shadow">
   <thead class="table-light">
     <tr>
@@ -39,11 +50,13 @@
     @for (reservas of reservaciones; track reservas.id) {
     <tr>
       <td>{{ reservas.id }}</td>
+
       @if (reservas.id_tipo_recurso === 1) {
       <td>Instalaciones</td>
-      }@else {
+      } @else {
       <td>Herramientas</td>
       }
+
       <td>{{ reservas.nombre_vecino }}</td>
       <td>{{ reservas.fecha }}</td>
       <td>{{ reservas.hora_inicio }}</td>
@@ -52,46 +65,45 @@
       <td>{{ reservas.estado }}</td>
       <td>{{ reservas.nombre_recurso }}</td>
       <td>{{ reservas.status }}</td>
-      <td>
-        <button class="btn btn-info" (click)="visualizarReserva(reservas.id)">Ver</button>
-        <a
-          class="btn btn-danger"
-          data-bs-toggle="modal"
-          data-bs-target="#exampleModal"
-          (click)="deleteReserva(reservas.id)"
-          >Eliminar</a
+
+      <td class="d-flex justify-content-center gap-2">
+        <button
+          class="btn btn-info btn-sm"
+          type="button"
+          (click)="visualizarReserva(reservas.id, 'info')"
         >
+          <i class="bi bi-eye"></i>
+        </button>
+
+        <button
+          class="btn btn-danger btn-sm"
+          type="button"
+          (click)="deleteReserva(reservas.id, 'danger')"
+        >
+          <i class="bi bi-trash"></i>
+        </button>
+
+        <button
+          class="btn btn-success btn-sm"
+          type="button"
+          (click)="activarReserva(reservas.id, 'success')"
+        >
+          <i class="bi bi-check-circle"></i>
+        </button>
       </td>
     </tr>
     }
   </tbody>
 </table>
-}@else {
-<div>
-  <span class="text-danger border"> No se cargaron los datos </span>
+
+} @else {
+
+<div class="text-center mt-3">
+  <span class="text-danger border p-2 d-inline-block">No se cargaron los datos</span>
   <hr />
-  <button class="btn btn-primary" (click)="charge()">Recargar</button>
+  <button class="btn btn-primary" (click)="charge()">
+    <i class="bi bi-arrow-clockwise"></i> Recargar
+  </button>
 </div>
+
 }
-<!-- Modal -->
-<div
-  class="modal fade"
-  id="exampleModal"
-  tabindex="-1"
-  aria-labelledby="exampleModalLabel"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">...</div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>

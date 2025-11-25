@@ -1,5 +1,6 @@
-import { Component, input, Input } from '@angular/core';
+import { Component, input, Input, output } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Reservaciones } from '../../Models/reservaciones';
 
 export type AlertType = 'primary' | 'success' | 'warning' | 'danger';
 
@@ -10,37 +11,17 @@ export type AlertType = 'primary' | 'success' | 'warning' | 'danger';
   templateUrl: './cuadroAlerta.html',
 })
 export class CuadroAlerta {
-  // @Input() type: AlertType = 'primary';
-  // @Input() message: string = '';
+  reservacion!: Reservaciones;
 
-  // get iconId(): string {
-  //   switch (this.type) {
-  //     case 'success':
-  //       return 'check-circle-fill';
-  //     case 'warning':
-  //     case 'danger':
-  //       return 'exclamation-triangle-fill';
-  //     default:
-  //       return 'info-fill';
-  //   }
-  // }
+  datos = input.required<Reservaciones>();
+  informacion = input.required<string>();
+  respuesta = output<boolean>();
 
-  // get ariaLabel(): string {
-  //   switch (this.type) {
-  //     case 'success':
-  //       return 'Success:';
-  //     case 'warning':
-  //       return 'Warning:';
-  //     case 'danger':
-  //       return 'Danger:';
-  //     default:
-  //       return 'Info:';
-  //   }
-  // }
+  aceptar() {
+    this.respuesta.emit(true);
+  }
 
-  alert = false;
-  activaralerta() {
-    this.alert = true;
-    setTimeout(() => (this.alert = false), 2000);
+  rechazar() {
+    this.respuesta.emit(false);
   }
 }
